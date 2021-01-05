@@ -1,38 +1,206 @@
-.App {
-  text-align: center;
+@import url('https://fonts.googleapis.com/css2?family=Spectral:wght@700&display=swap');
+
+body{
+    font-family: Helvetica, Arial, sans-serif;
+    
+}
+.container{
+  font-size: 1.1rem;
+  font-weight: 700;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.error{
+  color: #c32b3f;
+  font-weight: 600;
+  font-size: 16px;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.title {
+  font-family: 'Spectral', 'Georgia';
+  line-height: 1;
+  font-size: 3.5rem;
+  margin: 1rem 0;
+  position: relative;
+  z-index: 1;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+.title::after {
+  content: '';
+  display: block;
+  width: 1.7rem;
+  height: 1.7rem;    
+  background:#3c6178;
+  position: absolute;
+  bottom: 4px;
+  left: -4px;
+  border-radius: 0.2rem;
+  z-index: -1;
+}
+.animeLeft {
+  opacity: 0;
+  transform: translateX(-20px);
+  animation: animeLeft 0.3s forwards;
 }
 
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
+@keyframes animeLeft {
   to {
-    transform: rotate(360deg);
+    opacity: 1;
+    transform: initial;
   }
 }
+  
+  .editar-icons{
+    
+    width: 40px;
+    height: 20px;
+    color:#3c6178;
+    
+  }
+
+  .deletar-icons{
+    width: 46px;
+    height: 23px;
+    color:#3c6178;
+    
+  }
+
+  /* .diploma{
+    width: 240px;
+    height: 60px;
+    color:#c32b3f
+  } */
+
+  .visualizar-icons{
+    width: 70px;
+    height: 25px;
+    color:#3c6178;
+  }
+
+    .table{
+    font-size: 1rem;
+    font-weight: 500;
+  }
+
+  .alert{
+    width: 850px;
+  }
+
+  .content {
+    grid-area: content;
+  }
+  
+  .sidenav {
+    grid-area: sidenav;
+   
+
+  }
+  
+  .grid {
+    display: grid;
+    
+     }
+  
+  .titleGrid{
+    grid-area: titleGrid;
+  }
+
+
+  .grid-template-areas-1 {
+    grid-template-columns: 22% 78%;
+    grid-template-areas:   
+     "sidenav titleGrid "   
+      "sidenav content "
+      "sidenav content "
+      ;
+  } 
+
+  .initialTitle{
+    grid-area: initialTitle;
+  }
+
+  .diploma{
+    grid-area: diploma;
+    width: 100px;
+    height: 100px;
+    color:#c32b3f
+    
+  }
+
+  .grid-template-areas-2 {
+    grid-template-columns: 22% 78%;
+    grid-template-areas:   
+     "sidenav diploma"   
+      "sidenav initialTitle "
+      "sidenav . "
+      ;
+  }
+
+   .link{
+    color:#fff;
+    font-size: 14px;
+  }
+ 
+  .linkLogin{
+   color:#3c6178;
+   font-size: 1.5rem;
+   font-weight: 800;
+  }
+
+ 
+  .user{
+    width: 34px;
+    height: 32px;
+  }
+
+  .subtitle {
+    font-family: 'Spectral', 'Georgia';
+    line-height: 2;
+    font-size: 2rem;
+  }
+  
+  .subtitle::after {
+    content: '';
+    display: block;
+    background: #d3d3d3;
+    height: 0.5rem;
+    width: 3rem;
+    border-radius: 0.2rem;
+  }
+
+  .subtitleModal {
+    font-family: 'Spectral', 'Georgia';
+    line-height: 2;
+    font-size: 2rem;
+  }
+  
+  .subtitleModal::after {
+    content: '';
+    display: block;
+    background: #3c6178;
+    height: 0.5rem;
+    width: 2rem;
+    border-radius: 0.2rem;
+    font-size: 1rem;
+  }
+
+   .initialTitle {
+    font-family: 'Spectral', 'Georgia';
+    line-height: 1;
+    font-size: 4.5rem;
+    margin: 1rem 0;
+    position: relative;
+    z-index: 1;
+  }
+  
+  .initialTitle::after {
+    content: '';
+    display: block;
+    width: 1.7rem;
+    height: 1.7rem;    
+    background:#3c6178;
+    position: absolute;
+    bottom: 17px;
+    left: -5px;
+    border-radius: 0.2rem;
+    z-index: -1;
+  }
