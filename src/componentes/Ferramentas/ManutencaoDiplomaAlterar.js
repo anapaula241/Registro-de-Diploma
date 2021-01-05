@@ -116,6 +116,7 @@ const ManutencaoDiplomaAlterar = () => {
             <Select lg='6' size='lg' label='Habilitacao' value={modality} name='modality' register={register({ required: true })} options={['Bacheralado', 'Licenciatura', 'Tecnólogo']} textoErro={errors.modality && "Campo Habilitação é obrigatório"} onChange={({ target }) => setModality(target.value)}></Select>
           </Form.Row>
 
+
           <Form.Row>
             <Form.Group as={Col} lg="11">
               <Form.Label className='mr-3'>Tipo</Form.Label>
