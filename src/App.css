@@ -49,33 +49,6 @@ body{
   }
 }
   
-  .editar-icons{
-    
-    width: 40px;
-    height: 20px;
-    color:#3c6178;
-    
-  }
-
-  .deletar-icons{
-    width: 46px;
-    height: 23px;
-    color:#3c6178;
-    
-  }
-
-  /* .diploma{
-    width: 240px;
-    height: 60px;
-    color:#c32b3f
-  } */
-
-  .visualizar-icons{
-    width: 70px;
-    height: 25px;
-    color:#3c6178;
-  }
-
     .table{
     font-size: 1rem;
     font-weight: 500;

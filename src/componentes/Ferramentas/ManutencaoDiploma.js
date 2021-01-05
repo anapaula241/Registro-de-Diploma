@@ -101,7 +101,7 @@ const ManutencaoDiploma = () => {
                                     
                                     <td>
                                         
-                                        <FaUserEdit className='editar-icons ' title="Alterar" onClick={handleEdit} ></FaUserEdit>
+                                        <FaUserEdit className = 'ml-3' size='2em'  color='#3c6178'  title="Alterar" onClick={handleEdit} ></FaUserEdit>
                                     </td>
                                 </tr>
                             ))}

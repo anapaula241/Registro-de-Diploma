@@ -101,7 +101,7 @@ const Diplomas = () => {
                                     <td>{data}</td>
                                     <td>{situacao}</td>
                                     <td>
-                                        <ImEyeMinus className='visualizar-icons' type='button' title="Visualizar" onClick={handleView} ></ImEyeMinus >
+                                        <ImEyeMinus size='2em' className='ml-3' type='button' title="Visualizar"  onClick={handleView} ></ImEyeMinus >
                                     </td>
                                 </tr>
                             ))}

@@ -4,7 +4,7 @@ import Button from 'react-bootstrap/Button';
 import Form from 'react-bootstrap/Form';
 import Table from 'react-bootstrap/Table';
 import Modal from 'react-bootstrap/Modal';
-import { FaEdit, FaUserEdit, FaTrashAlt } from 'react-icons/fa';
+import { FaUserEdit } from 'react-icons/fa';
 import { RiDeleteBin6Line } from "react-icons/ri";
 import { event } from 'jquery';
 import ModalConfirmarExclusao from '../Form/Modal/ModalConfirmarExclusao';
@@ -114,8 +114,8 @@ const Diploma = () => {
                   <td>{data}</td>
                   <td>
                   
-                    <FaUserEdit className='editar-icons mr-2' title="Editar" onClick={handleShow} ></FaUserEdit >
-                    <RiDeleteBin6Line className='deletar-icons mt-1' title="Excluir" onClick={handleShowExcluir}></RiDeleteBin6Line>
+                    <FaUserEdit   size='2em'  color='#3c6178'  title="Editar" onClick={handleShow} ></FaUserEdit >
+                    <RiDeleteBin6Line className='ml-3 mt-1' size='1.9em'  color='#c32b3f'  title="Excluir" onClick={handleShowExcluir}></RiDeleteBin6Line>
                     {/* <FaTrashAlt className='deletar-icons ' title="Excluir" onClick={handleShowExcluir} ></FaTrashAlt> */}
                   </td>
                 </tr>
