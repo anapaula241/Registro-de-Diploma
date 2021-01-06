@@ -41,6 +41,7 @@ const DiplomaVisualizar = () => {
   const [registrationDate, setRegistrationDate] = React.useState('');
   const [lotNumber, setLotNumber] = React.useState('');
   const [status, setStatus] = React.useState([]);
+  const [note, setNote] = React.useState('');
   // const [showAlert, setShowAlert] = React.useState(false);
   const [loading, setLoading] = React.useState('');
   // const [erroCpf, setErroCpf] = React.useState('');
@@ -60,6 +61,7 @@ const DiplomaVisualizar = () => {
   })
  
   const handleBack = () => navigate('/consulta/diplomas/');
+  
   function handleChange({ target }) {
     if (target.checked) {
       setStatus([...status, target.value]);
@@ -103,8 +105,8 @@ const DiplomaVisualizar = () => {
           </Form.Row>
 
           <Form.Row>
-            <Input size='lg' lg="5" label='Matrícula' name='ra' register={register({ required: true })} value={nationality} type='text' textoErro={errors.ra && "Campo Matrícula é obrigatório"} placeholder='Número da Matrícula' onChange={(event) => setRa(event.target.value)}></Input>
-            <Input size='lg' lg="6" label='Tipo Diploma' name='diplomaTypes' register={register({ required: true })} value={level} type='text' textoErro={errors.diplomaTypes && "Campo Tipo Diploma é obrigatório"} placeholder='Número da Matrícula' onChange={(event) => setDiplomaTypes(event.target.value)}></Input>
+            <Input size='lg' lg="5" label='Matrícula' name='ra' register={register({ required: true })} value={ra} type='text' textoErro={errors.ra && "Campo Matrícula é obrigatório"} placeholder='Número da Matrícula' onChange={(event) => setRa(event.target.value)}></Input>
+            <Input size='lg' lg="6" label='Tipo Diploma' name='diplomaTypes' register={register({ required: true })} value={diplomaTypes} type='text' textoErro={errors.diplomaTypes && "Campo Tipo Diploma é obrigatório"} placeholder='Tipo do diploma' onChange={(event) => setDiplomaTypes(event.target.value)}></Input>
           </Form.Row>
 
           <Form.Row>
@@ -146,13 +148,11 @@ const DiplomaVisualizar = () => {
           </Form.Group>
 
           <Form.Row>
-            <Textarea label='Observação' lg='11' rows={4} size='lg' className='mt-3'></Textarea>
+            <Textarea label='Observação'  name = 'note' lg='11' rows={4} size='lg' className='mt-3'  register={register({ required: true })} onChange={({ target }) => setNote(target.value)} textoErro={errors.note && "Campo Situação é obrigatório"}></Textarea>
           </Form.Row>
+       
 
-          <Form.Row className="mt-3">
-            <Form.Label as={Col} lg='6'>Histórico</Form.Label>
-          </Form.Row>
-
+        
           {loading ? (<Button size='lg' disabled className="col-lg-2 mt-3 " variant="primary" type="submit"> Aguarde...</Button>
           ) : (<Button size='lg' className="col-lg-2 mt-3 mr-2 " variant="primary" type="submit"> Pesquisar </Button>)}
           <Button size='lg' className="col-lg-2 mt-3 " variant="secondary" type="submit" onClick={handleBack}> Voltar </Button>
