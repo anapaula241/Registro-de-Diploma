@@ -26,17 +26,16 @@ const LoginForm = () => {
 // const dados = React.useContext(UserContext);
 
   return (
-    <div class="container animeLeft grid grid-template-areas-1">
-      <div class='content'>
-        <div className="col-10">
-          <h1 className="mt-5 login title" >Login</h1>
-          <Form onSubmit={handleSubmit(onSubmit)} className="mt-4 ">
+    <div className="container animeLeft grid grid-template-areas-2">
+        <div class='titleGrid'><h1 className="mt-2 login title" >Login</h1></div>
+        <div className='content' >
+                   <Form onSubmit={handleSubmit(onSubmit)} className="mt-4 ">
             <Form.Row>
-              <Input lg="10" label='Masp' name='masp' size='lg' register={register({ required: true })} value={masp} type='number' placeholder="Seu Masp" textoErro={errors.masp && "Campo Masp é obrigatório"} onChange={(event) => setMasp(event.target.value)}></Input>
+              <Input lg="12" label='Masp' name='masp' size='lg' register={register({ required: true })} value={masp} type='number' placeholder="Seu Masp" textoErro={errors.masp && "Campo Masp é obrigatório"} onChange={(event) => setMasp(event.target.value)}></Input>
             </Form.Row>
 
             <Form.Row>
-              <Input lg="10" label='Senha' name='password' size='lg' register={register({ required: true })} value={password} type='text' placeholder="Sua Senha" textoErro={errors.password && "Campo Senha é obrigatório"} onChange={(event) => setPassword(event.target.value)}></Input>
+              <Input lg="12" label='Senha' name='password' size='lg' register={register({ required: true })} value={password} type='text' placeholder="Sua Senha" textoErro={errors.password && "Campo Senha é obrigatório"} onChange={(event) => setPassword(event.target.value)}></Input>
             </Form.Row>
 
             {loading ? (<Button size='lg' disabled className=" mb-4" variant="primary" type="submit"> Carregando...</Button>
@@ -44,13 +43,12 @@ const LoginForm = () => {
 
           </Form>
 
-          <div className="mt-4 mb-4"><Link className="my-5" to="/login/perdeu">Esqueceu a Senha?</Link></div>
-          <h2 className="title subtitle mt-3 " >Cadastre-se</h2>
+          <div className="mt-4 mb-4  subtitle "><Link className="my-5" to="/login/perdeu">Esqueceu a Senha?</Link></div>
+          <div className=" subtitle mt-3 "> Cadastre-se</div>  
           <p className="mt-3 mb-3">Ainda não possui conta? Cadastre-se agora.</p>
           <Button size='lg' className=" mt-2 mb-4" onClick={handleRegister} >Cadastro</Button>
-        </div>
-      </div>
-    </div>
+         </div>
+     </div>
   );
 };
 

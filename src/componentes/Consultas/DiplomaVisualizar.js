@@ -42,7 +42,9 @@ const DiplomaVisualizar = () => {
   const [lotNumber, setLotNumber] = React.useState('');
   const [status, setStatus] = React.useState([]);
   const [note, setNote] = React.useState('');
-  // const [showAlert, setShowAlert] = React.useState(false);
+  const [showAlertSuccessRegister, setShowAlertSuccessRegister] = React.useState(true);
+  const [showAlertErrorRegister, setShowAlertErrorRegister] = React.useState(true);
+  
   const [loading, setLoading] = React.useState('');
   // const [erroCpf, setErroCpf] = React.useState('');
   const { register, handleSubmit, errors } = useForm();
@@ -81,9 +83,9 @@ const DiplomaVisualizar = () => {
         <Acordeao></Acordeao>
       </div>
 
-      <div className='content' content>
-        <AlertSucess texto=' Registro Cadastrado com sucesso !'></AlertSucess>
-        <AlertError texto='Houve um erro no seu Cadastro !'></AlertError>
+      <div className='content' >
+        <AlertSucess texto=' Registro Cadastrado com sucesso !' show={showAlertSuccessRegister} className='col-md-11' onClick={() => setShowAlertSuccessRegister(false)}></AlertSucess>
+        <AlertError texto='Houve um erro no seu Cadastro !' show={showAlertErrorRegister} className='col-md-11' onClick={() => setShowAlertErrorRegister(false)}></AlertError>
 
         <Form onSubmit={handleSubmit(onSubmit)} className="mt-5 ">
           <Form.Row>

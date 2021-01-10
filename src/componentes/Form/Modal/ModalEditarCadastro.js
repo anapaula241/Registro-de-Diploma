@@ -4,7 +4,7 @@ import Button from 'react-bootstrap/Button';
 
 function ModalEditarCadastro({show, onHide, className, onClick, children, texto}) {
     return (
-        <Modal show={show} onHide={onHide} backdrop="static" keyboard={false}  >
+        <Modal  size="lg" show={show} onHide={onHide} backdrop="static" keyboard={false}  >
 
         <Modal.Header closeButton>
     <Modal.Title className={className}>{texto}</Modal.Title>

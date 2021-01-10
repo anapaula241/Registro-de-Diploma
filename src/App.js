@@ -16,6 +16,10 @@ import LoginCreate from './componentes/Login/LoginCreate';
 import ManutencaoDiploma from './componentes/Ferramentas/ManutencaoDiploma';
 import ManutencaoDiplomaAlterar from './componentes/Ferramentas/ManutencaoDiplomaAlterar';
 import HomeScreen from './componentes/HomeScreen';
+import Instituicao from './componentes/Cadastros/Instituicao';
+import IncluirCadastroInstituicao from './componentes/Cadastros/IncluirCadastroInstituicao';
+import Curso from './componentes/Cadastros/Curso';
+import CursoOfertado from './componentes/Cadastros/CursoOfertado';
 
 const App = () => {
   return (
@@ -31,12 +35,16 @@ const App = () => {
             <Route path="/" element={<Login />} />
             <Route path="/login/*" element={<Login></Login>} />
             <Route path="/cadastro/diploma" element={<Diploma></Diploma>} />
+            <Route path="/cadastro/instituicao" element={<Instituicao></Instituicao>} />
+            <Route path="/cadastro/incluirCadastroInstituicao" element={<IncluirCadastroInstituicao></IncluirCadastroInstituicao>} />
+            <Route path="/cadastro/incluirCadastroDiploma" element={<IncluirCadastroDiploma></IncluirCadastroDiploma>} />
+            <Route path="/cadastro/curso" element={<Curso></Curso>} />
+            <Route path="/cadastro/cursoOfertado" element={<CursoOfertado></CursoOfertado>} />
             <Route path="/consulta/diplomas" element={<Diplomas></Diplomas>} />
             <Route path="/consulta/diplomas/visualizar" element={<DiplomaVisualizar></DiplomaVisualizar>} />
             <Route path="/ferramentas/manutencaoDiploma/alterar" element={<ManutencaoDiplomaAlterar></ManutencaoDiplomaAlterar>} />
             <Route path="/ferramentas/manutencaoDiploma" element={<ManutencaoDiploma></ManutencaoDiploma>} />
-            <Route path="/operacoes/livroRegistro" element={<LivroRegistro></LivroRegistro>} />
-            <Route path="/cadastro/incluirCadastroDiploma" element={<IncluirCadastroDiploma></IncluirCadastroDiploma>} />
+            <Route path="/operacoes/livroRegistro" element={<LivroRegistro></LivroRegistro>} />           
             <Route path="/ferramentas/manutencaoDiploma" element={<ManutencaoDiploma></ManutencaoDiploma>} />
             <Route path="/login/telaPrincipal" element={<HomeScreen></HomeScreen>} />
           </Routes>

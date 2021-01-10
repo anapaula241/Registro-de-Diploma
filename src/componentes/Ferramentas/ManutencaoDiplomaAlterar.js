@@ -58,12 +58,12 @@ const ManutencaoDiplomaAlterar = () => {
   const [ brand,  setBrand] = React.useState('');
   const [ statusInput,  setStatusInput] = React.useState('');
   const [ complement,  setComplement] = React.useState('');
-  // const [showAlert, setShowAlert] = React.useState(false);
+  const [showAlertSuccessRegister, setShowAlertSuccessRegister] = React.useState(true);
+  const [showAlertErrorRegister, setShowAlertErrorRegister] = React.useState(true);
   const [loading, setLoading] = React.useState('');
   // const [erroCpf, setErroCpf] = React.useState('');
   const { register, handleSubmit, errors } = useForm();
   const navigate = useNavigate();
-
 
   // simulando dados do banco 
   const [dados, setDados] = React.useState([
@@ -100,9 +100,8 @@ const ManutencaoDiplomaAlterar = () => {
       </div>
 
       <div className='content' content>
-        {/* <AlertSucess texto=' Registro Cadastrado com sucesso !'></AlertSucess> */}
-        <AlertError texto='Houve um erro no seu Cadastro !'></AlertError>
-
+        <AlertSucess texto=' Registro Cadastrado com sucesso !' show={showAlertSuccessRegister} className='col-md-11' onClick={() => setShowAlertSuccessRegister(false)}></AlertSucess>
+        <AlertError texto='Houve um erro no seu Cadastro !' show={showAlertErrorRegister} className='col-md-11' onClick={() => setShowAlertErrorRegister(false)}></AlertError>
         <Form onSubmit={handleSubmit(onSubmit)} className="mt-5 ">
           <Form.Row>
             <Input size='lg' lg="11" label='Nome do Aluno' name='name' register={register({ required: true })} value={name} type='text' textoErro={errors.name && "Campo Nome do Aluno é obrigatória"} placeholder='Nome do aluno' onChange={(event) => setName(event.target.value)}></Input>
